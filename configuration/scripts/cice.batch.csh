@@ -159,7 +159,6 @@ cat >> ${jobfile} << EOFB
 # nothing to do
 EOFB
 
-
 else if (${ICE_MACHINE} =~ travisCI*) then
 cat >> ${jobfile} << EOFB
 # nothing to do

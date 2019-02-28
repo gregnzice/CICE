@@ -89,6 +89,11 @@ cat >> ${jobfile} << EOFR
 ./cice >&! \$ICE_RUNLOG_FILE
 EOFR
 #=======
+else if (${ICE_MACHINE} =~ ou093070*) then
+cat >> ${jobfile} << EOFR
+./cice >&! \$ICE_RUNLOG_FILE
+EOFR
+#=======
 else if (${ICE_MACHINE} =~ travisCI*) then
 cat >> ${jobfile} << EOFR
 mpirun -np ${ntasks} ./cice >&! \$ICE_RUNLOG_FILE
