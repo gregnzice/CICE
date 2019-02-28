@@ -44,15 +44,15 @@ set shortcase = `echo ${ICE_CASENAME} | cut -c1-15`
 #==========================================
 
 cat >! ${jobfile} << EOF0
-#!/bin/csh -f 
+#!/bin/csh -f
 EOF0
 
 #==========================================
 
 if (${ICE_MACHINE} =~ cheyenne*) then
 cat >> ${jobfile} << EOFB
-#PBS -j oe 
-###PBS -m ae 
+#PBS -j oe
+###PBS -m ae
 #PBS -V
 #PBS -q ${queue}
 #PBS -N ${ICE_CASENAME}
@@ -63,8 +63,8 @@ EOFB
 
 else if (${ICE_MACHINE} =~ hobart*) then
 cat >> ${jobfile} << EOFB
-#PBS -j oe 
-###PBS -m ae 
+#PBS -j oe
+###PBS -m ae
 #PBS -V
 #PBS -q short
 #PBS -N ${ICE_CASENAME}
@@ -153,6 +153,12 @@ else if (${ICE_MACHINE} =~ testmachine*) then
 cat >> ${jobfile} << EOFB
 # nothing to do
 EOFB
+
+else if (${ICE_MACHINE} =~ ou093070*) then
+cat >> ${jobfile} << EOFB
+# nothing to do
+EOFB
+
 
 else if (${ICE_MACHINE} =~ travisCI*) then
 cat >> ${jobfile} << EOFB
