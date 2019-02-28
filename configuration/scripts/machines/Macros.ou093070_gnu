@@ -38,7 +38,7 @@ LD:= gfortran
 #PIO_CONFIG_OPTS:= --enable-filesystem-hints=gpfs
 
 INCLDIR := $(INCLDIR)
-INCLDIR += -I$(NETCDF_PATH)/include
+#INCLDIR += -I$(NETCDF_PATH)/include
 
 LIB_NETCDF := $(NETCDF_PATH)/lib
 #LIB_PNETCDF := $(PNETCDF_PATH)/lib
