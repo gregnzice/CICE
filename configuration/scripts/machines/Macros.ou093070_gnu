@@ -39,6 +39,7 @@ LD:= gfortran
 
 INCLDIR := $(INCLDIR)
 #INCLDIR += -I$(NETCDF_PATH)/include
+INCLDIR += -I/home/leogr81p/GitRepositories/CICE/icepack/columnphysics
 
 LIB_NETCDF := $(NETCDF_PATH)/lib
 #LIB_PNETCDF := $(PNETCDF_PATH)/lib
