@@ -30,18 +30,18 @@ MPIFC:= mpif90
 LD:= gfortran
 
 # defined by module
-#NETCDF_PATH := $(NETCDF)
-#PNETCDF_PATH := $(PNETCDF)
+NETCDF_PATH := /usr
+PNETCDF_PATH := /usr
 #PNETCDF_PATH := /glade/apps/opt/pnetcdf/1.3.0/intel/default
 #LAPACK_LIBDIR := /glade/apps/opt/lapack/3.4.2/intel/12.1.5/lib
 
 #PIO_CONFIG_OPTS:= --enable-filesystem-hints=gpfs
 
 INCLDIR := $(INCLDIR)
-#INCLDIR += -I$(NETCDF_PATH)/include
-#INCLDIR += -I/home/leogr81p/GitRepositories/CICE/icepack/columnphysics
+INCLDIR += -I$(NETCDF_PATH)/include
 
-LIB_NETCDF := $(NETCDF_PATH)/lib
+
+LIB_NETCDF := $(NETCDF_PATH)/lib/x86_64-linux-gnu
 #LIB_PNETCDF := $(PNETCDF_PATH)/lib
 #LIB_MPI := $(IMPILIBDIR)
 SLIBS   := -L$(LIB_NETCDF) -lnetcdf -lnetcdff
