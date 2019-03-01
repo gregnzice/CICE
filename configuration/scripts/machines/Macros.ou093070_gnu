@@ -28,7 +28,7 @@ endif
 MPICC:= mpicc
 MPIFC:= mpif90
 #LD:= $(MPIFC)
-LD:= gfortran
+LD:= mpifort
 
 # defined by module
 NETCDF_PATH := /usr
